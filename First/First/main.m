@@ -8,20 +8,34 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Vehicle:NSObject
-
+@interface Vehicle:NSObject { // 클래스 상속은 ':' 로 구분
+// member variable area
+    int wheels; // 이곳에서 초기화할 수 없다.
+    int seats;
+}
+// member method area
+-(void)setWheels:(int) w; // 파라메터도 ':'로 구분
+-(void)setSeats:(int) s;
+-(void)print;
+//
 @end
 
 @implementation Vehicle
+-(void)setWheels:(int) w {
+    wheels = w;
+}
+-(void)setSeats:(int)s {
+    seats = s;
+}
+-(void)print {
+    NSLog(@"wheels : %i, seats : %i", wheels, seats);
+}
 
 @end
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        int wheels = 4; // primitive type - int, float, double, long
-        int seats = 2;
 
-        NSLog(@"wheels : %i, seats : %i", wheels, seats);
     }
     return 0;
 }

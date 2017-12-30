@@ -15,7 +15,7 @@
 }
 // member method area
 @property int wheels; // @property 는 자동으로 getter/setter를 자동으로 만들어줌.
-@property int seats;
+@property int seats;  // property는 기본적으로                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       setter는 set으로 getter는 get을 제외한 것으로 만들어준다.
 //-(void)setWheels:(int) w; // 파라메터도 ':'로 구분
 //-(int)wheels; // 일반적으로 get을 앞에 붙여야하지만 ObjectiveC에서는 get을 제외해준다.
 //-(void)setSeats:(int) s;
@@ -54,13 +54,13 @@ int main(int argc, const char * argv[]) {
         // alloc : 동적할당
         // init : 초기화
         // 보통 alloc * init 방식을 이용함.
-
-        [vehicle setWheels:4];
-        [vehicle setSeats:2];
-
-        //[vehicle print];
-        NSLog(@"wheels : %i, seats : %i", [vehicle wheels], [vehicle seats]);
-
+        // dot연산자도 사용 가능.
+        //[vehicle setWheels:4];
+        //[vehicle setSeats:2];
+        //NSLog(@"wheels : %i, seats : %i", [vehicle wheels], [vehicle seats]);
+        vehicle.wheels = 4;
+        vehicle.seats = 2;
+        NSLog(@"wheels : %i, seats : %i", vehicle.wheels, vehicle.seats);
     }
     return 0;
 }

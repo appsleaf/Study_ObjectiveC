@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@interface Vehicle:NSObject
+
+@end
+
+@implementation Vehicle
+
+@end
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         int wheels = 4; // primitive type - int, float, double, long

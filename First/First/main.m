@@ -14,28 +14,32 @@
     int seats;
 }
 // member method area
--(void)setWheels:(int) w; // 파라메터도 ':'로 구분
--(int)wheels; // 일반적으로 get을 앞에 붙여야하지만 ObjectiveC에서는 get을 제외해준다.
--(void)setSeats:(int) s;
--(int)seats;
+@property int wheels; // @property 는 자동으로 getter/setter를 자동으로 만들어줌.
+@property int seats;
+//-(void)setWheels:(int) w; // 파라메터도 ':'로 구분
+//-(int)wheels; // 일반적으로 get을 앞에 붙여야하지만 ObjectiveC에서는 get을 제외해준다.
+//-(void)setSeats:(int) s;
+//-(int)seats;
 -(void)print;
 
 
 @end
 
 @implementation Vehicle
--(void)setWheels:(int) w {
-    wheels = w;
-}
--(int)wheels {
-    return wheels;
-}
--(void)setSeats:(int)s {
-    seats = s;
-}
--(int)seats {
-    return seats;
-}
+@synthesize wheels, seats; // 선언하지 않으면 에러는 발생하지는 않지만
+                           // Xcode의 intellisense key가 먹지 않는다.
+//-(void)setWheels:(int) w {
+//    wheels = w;
+//}
+//-(int)wheels {
+//    return wheels;
+//}
+//-(void)setSeats:(int)s {
+//    seats = s;
+//}
+//-(int)seats {
+//    return seats;
+//}
 -(void)print {
     NSLog(@"wheels : %i, seats : %i", wheels, seats);
 }

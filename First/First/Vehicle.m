@@ -11,6 +11,10 @@
 @implementation Vehicle
 @synthesize wheels, seats;
 
+-(void)setWheels:(int)wheels Seats:(int)seats {
+    self.wheels = wheels;
+    self.seats = seats;
+}
 -(void)print {
     NSLog(@"wheels : %i, seats : %i", wheels, seats);
 }

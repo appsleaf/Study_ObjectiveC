@@ -8,15 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Vehicle : NSObject{
-    // member variable area
-    int wheels;
-    int seats;
+@interface Vehicle : NSObject {
+
 }
 // member method area
 @property int wheels;
 @property int seats;
 
+-(void)setWheels:(int)wheels Seats:(int)seats;
 -(void)print;
 
 @end

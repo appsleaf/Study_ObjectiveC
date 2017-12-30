@@ -21,8 +21,9 @@ int main(int argc, const char * argv[]) {
         //[vehicle setWheels:4];
         //[vehicle setSeats:2];
         //NSLog(@"wheels : %i, seats : %i", [vehicle wheels], [vehicle seats]);
-        vehicle.wheels = 4;
-        vehicle.seats = 2;
+        //vehicle.wheels = 4;
+        //vehicle.seats = 2;
+        [vehicle setWheels:4 Seats:2];
         NSLog(@"wheels : %i, seats : %i", vehicle.wheels, vehicle.seats);
     }
     return 0;

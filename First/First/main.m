@@ -10,8 +10,10 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        int wheels = 4; // primitive type - int, float, double, long
+        int seats = 2;
+
+        NSLog(@"wheels : %i, seats : %i", wheels, seats);
     }
     return 0;
 }

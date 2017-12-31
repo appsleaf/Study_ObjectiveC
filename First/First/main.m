@@ -11,20 +11,31 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        Vehicle *vehicle = [Vehicle new];  //인스턴스 생성 시 '*'를 이용.
-        // [Receiver Message] Message(Method), invoke -> sent
-        // new -> alloc & init
-        // alloc : 동적할당
-        // init : 초기화
-        // 보통 alloc * init 방식을 이용함.
-        // dot연산자도 사용 가능.
-        //[vehicle setWheels:4];
-        //[vehicle setSeats:2];
-        //NSLog(@"wheels : %i, seats : %i", [vehicle wheels], [vehicle seats]);
-        //vehicle.wheels = 4;
-        //vehicle.seats = 2;
+        Vehicle *vehicle = [Vehicle new];
         [vehicle setWheels:4 Seats:2];
+
         NSLog(@"wheels : %i, seats : %i", vehicle.wheels, vehicle.seats);
+
+        if (vehicle.wheels == 4 ) {
+            NSLog(@"wheels : 4");
+        } else if ( vehicle.wheels == 3) {
+            NSLog(@"whells : 3");
+        } else {
+            NSLog(@"no");
+        }
+
+        switch (vehicle.seats) {
+            case 4:
+                NSLog(@"seats : 4");
+                break;
+            case 2:
+                NSLog(@"seats : 2");
+                break;
+            default:
+                NSLog(@"No");
+                break;
+        }
+
     }
     return 0;
 }
